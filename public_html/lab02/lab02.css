@@ -25,12 +25,12 @@ nav a{
 }
 
 /* note: * applies to every descendant element/ child/ grandchild element to share some style*/
-.about-section {
+#about-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 800px;
     width: 100%;
 }
 
@@ -39,29 +39,50 @@ h2 {
     font-size: 30px;
 }
 
-.about-section p{
+#about-section p{
     text-align: center;
     font-size: 20px;
 }
-.about-section figcaption{
+#about-section figcaption{
     color: grey;
     text-align: center;
 }
 /*----------------color section----------*/ 
-.color-section {
+
+/*whole containter will be centered and elements will be stacked on top of eachother*/
+#color-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 800px;
     width: 100%;
 }
-
+/*all the color boxes will be centered and spaced evenly next to eachother*/
 .colors{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly, center;
     align-content: center;
-    margin: 60 px;
+
+}
+
+.colors h4{
+    padding: 100px;
+    margin: 60px;
+    border: solid 5px black;
+}
+
+#pink:hover{
+    background-color: pink;
+}
+
+#sage:hover{
+    background-color: rgb(127, 172, 127);
+}
+
+#periwink:hover{
+    background-color: #c1c6fc;
+
 }
 
