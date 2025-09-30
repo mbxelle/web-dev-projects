@@ -10,23 +10,28 @@ h2 {
 #navbar {
     margin: 5px;
     padding: 5px;
-    background-color: rgb(182, 242, 222);
+    background-color: #c1c6fc;
+    width: 100%;
+
 }
 
 nav ul {
     display: flex;
     justify-content: flex-end;
-    list-style: none; /* note: list-style is a property that removes the dots from the list */
+    list-style: none;
+    /* note: list-style is a property that removes the dots from the list */
 }
 
-nav a{
+nav a {
     padding: 5px 10px;
     border: solid 2px grey;
     margin: 10px;
-    text-decoration: none;/* note: text-decoration is a property that removes the defualt underline and colour when link is pressed */
+    text-decoration: none;
+    /* note: text-decoration is a property that removes the defualt underline and colour when link is pressed */
     text-align: center;
     color: darkblue;
     font-size: 20px;
+    background-color: bisque;
 }
 
 /* note: * applies to every descendant element/ child/ grandchild element to share some style*/
@@ -35,20 +40,23 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 1000px;
     width: 100%;
+    border: solid 4px orange;
 }
 
 
-#about-section p{
+#about-section p {
     text-align: center;
     font-size: 20px;
 }
-#about-section figcaption{
+
+#about-section figcaption {
     color: grey;
     text-align: center;
 }
-/*----------------color section----------*/ 
+
+/*----------------color section----------*/
 
 /*whole containter will be centered and elements will be stacked on top of eachother*/
 #color-section {
@@ -58,9 +66,11 @@ nav a{
     align-items: center;
     height: 800px;
     width: 100%;
+    border: solid 4px orange;
 }
+
 /*all the color boxes will be centered and spaced evenly next to eachother*/
-.colors{
+.colors {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly, center;
@@ -73,21 +83,21 @@ nav a{
     text-align: center;
 }
 
-.colors h4{
+.colors h4 {
     padding: 100px;
     margin: 60px;
     border: solid 5px black;
 }
 
-#pink:hover{
+#pink:hover {
     background-color: pink;
 }
 
-#sage:hover{
+#sage:hover {
     background-color: rgb(127, 172, 127);
 }
 
-#periwink:hover{
+#periwink:hover {
     background-color: #c1c6fc;
 
 }
@@ -100,12 +110,25 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 1000px;
     width: 100%;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.1)),url('games.png');
+    border: solid 4px orange;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url('games.png');
 }
 
-.games{
+#games-section h2, .bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+}
+
+#games-section img {
+    height: 200px;
+    width: 200px;
+}
+
+.games {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly, center;
@@ -113,14 +136,41 @@ nav a{
 }
 
 #games-section h3 {
-    color: grey;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
-.games figure{
-    padding: 100px;
+.games figure {
+    padding: 50px;
     margin: 60px;
-    border: solid 5px black;
+    border: solid 5px rgb(255, 255, 255);
 }
 
+.games figcaption {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
 
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    background-color: #c1c6fc;
+    width: 100%;
+}
+
+footer img{
+    width: 100px;
+    height: 50px;
+}
+
+footer li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    font-size: 30px;
+}
