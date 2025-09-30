@@ -11,13 +11,57 @@ html {
 nav ul {
     display: flex;
     justify-content: flex-end;
+    list-style: none; /* note: list-style is a property that removes the dots from the list */
 }
 
-nav li{
+nav a{
     padding: 5px 10px;
     border: solid 2px grey;
     margin: 10px;
-    list-style: none; /* note: list-style is a property that removes the dots from the list */
+    text-decoration: none;/* note: text-decoration is a property that removes the defualt underline and colour when link is pressed */
     text-align: center;
-    texrt
+    color: darkblue;
+    font-size: 20px;
 }
+
+/* note: * applies to every descendant element/ child/ grandchild element to share some style*/
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+}
+
+/*all h2*/
+h2 {
+    font-size: 30px;
+}
+
+.about-section p{
+    text-align: center;
+    font-size: 20px;
+}
+.about-section figcaption{
+    color: grey;
+    text-align: center;
+}
+/*----------------color section----------*/ 
+.color-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+}
+
+.colors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly, center;
+    align-content: center;
+    margin: 60 px;
+}
+
