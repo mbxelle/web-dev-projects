@@ -2,6 +2,11 @@ html {
     background-color: bisque;
 }
 
+/*all h2*/
+h2 {
+    font-size: 30px;
+}
+
 #navbar {
     margin: 5px;
     padding: 5px;
@@ -34,10 +39,6 @@ nav a{
     width: 100%;
 }
 
-/*all h2*/
-h2 {
-    font-size: 30px;
-}
 
 #about-section p{
     text-align: center;
@@ -65,6 +66,11 @@ h2 {
     justify-content: space-evenly, center;
     align-content: center;
 
+}
+
+#color-section h3 {
+    color: grey;
+    text-align: center;
 }
 
 .colors h4{
