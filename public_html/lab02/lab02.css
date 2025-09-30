@@ -1,0 +1,23 @@
+html {
+    background-color: bisque;
+}
+
+#navbar {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(182, 242, 222);
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li{
+    padding: 5px 10px;
+    border: solid 2px grey;
+    margin: 10px;
+    list-style: none; /* note: list-style is a property that removes the dots from the list */
+    text-align: center;
+    texrt
+}
