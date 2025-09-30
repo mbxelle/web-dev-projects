@@ -92,3 +92,35 @@ nav a{
 
 }
 
+/*-----------GAMES SECTION---------*/
+
+
+#games-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.1)),url('games.png');
+}
+
+.games{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly, center;
+    align-content: center;
+}
+
+#games-section h3 {
+    color: grey;
+    text-align: center;
+}
+
+.games figure{
+    padding: 100px;
+    margin: 60px;
+    border: solid 5px black;
+}
+
+
