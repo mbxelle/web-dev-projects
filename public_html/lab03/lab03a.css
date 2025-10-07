@@ -1,7 +1,7 @@
 /*help to reset and normalize page before styling*/
 * {
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -11,7 +11,7 @@ body {
 
 }
 
-header nav{
+header nav {
     background-color: rgb(160, 160, 230);
     width: 100%;
     margin: 0;
@@ -21,7 +21,7 @@ header nav{
     align-items: center;
 }
 
-header ul{
+header ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -34,7 +34,7 @@ header li {
 header a {
     padding: 10px;
     margin: 10px;
-    border: solid 3px blueviolet; 
+    border: solid 3px blueviolet;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: blueviolet;
@@ -43,8 +43,12 @@ header a {
 
 
 /*about section css*/
-#about-section{
-    max-height: 700px;
+#about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
     margin: 20px;
 }
 
@@ -60,10 +64,10 @@ header a {
 #about-section h1 {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
-    color:blueviolet;
+    color: blueviolet;
 }
 
-#about-section figure{
+#about-section figure {
     padding: 20px;
     border: soild 3px powderblue;
 }
@@ -81,7 +85,7 @@ header a {
     text-align: left;
 }
 
-#about-section a{
+#about-section a {
 
     font-family: 'Montserrat', sans-serif;
     color: blueviolet;
@@ -91,48 +95,105 @@ header a {
 
 /* animals section*/
 
+/*animal section houses animal cards section and title */
+.animals-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    color: blueviolet;
+    margin: 30px;
+
+}
+
+/*animals houses all the animal cards*/
+.animals {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* is a container for the pet image + descriptions+ button*/
+.animal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+    border: solid 4px blueviolet; 
+}
+
+.animal-card img {
+    width: 200px;
+    height: 200px;
+    border: solid 4px rgb(0, 0, 0);
+}
+.animal-card ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    margin: 10px;
+}
+.animal-card li {
+    text-align: center;
+    border: solid 1px rgb(0, 0, 0);
+    padding: 10px;
+
+}
+
 /*--adopt me button section --*/
 .adopt-me-btn {
-  position: relative;
-  background: #b4ecff;
-  color: blueviolet;
-  font-size: 1.2rem;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  cursor: pointer;
-  overflow: hidden;
+    position: relative;
+    background: #c6b3f4;
+    color: blueviolet;
+    font-size: 1.2rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 20px;
 }
 
 /* two pseudo-elements for sparkle layers */
 .adopt-me-btn::before,
 .adopt-me-btn::after {
-  content: "✨";
-  position: absolute;
-  opacity: 0;
-  transform: scale(0) rotate(0deg);
-  transition: transform 0.6s ease, opacity 0.4s ease;
+    content: "★ ";
+    position: absolute;
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+    transition: transform 0.6s ease, opacity 0.4s ease;
 }
 
 /* first star (top-left) */
 .adopt-me-btn::before {
-  top: -10px;
-  left: -10px;
+    top: -10px;
+    left: -10px;
 }
 
 /* second star (bottom-right) */
 .adopt-me-btn::after {
-  bottom: -10px;
-  right: -10px;
+    bottom: -10px;
+    right: -10px;
 }
 
 /* When hovered make stars appear + spin out */
 .adopt-me-btn:hover::before {
-  opacity: 1;
-  transform: scale(1.5) rotate(360deg) translate(20px, 20px);
+    opacity: 1;
+    transform: scale(1.5) rotate(360deg) translate(20px, 20px);
 }
 
 .adopt-me-btn:hover::after {
-  opacity: 1;
-  transform: scale(1.5) rotate(-360deg) translate(-20px, -20px);
+    opacity: 1;
+    transform: scale(1.5) rotate(-360deg) translate(-20px, -20px);
 }
