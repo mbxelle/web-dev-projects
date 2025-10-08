@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- this meta tag is important for making layout responsive on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption World</title>
+  <meta name="description" content="We are a pet adoption service that helps amazing animals locate to loving homes!">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="border-bottom sticky-top bg-light">
+
+    <nav class="container">
+      <ul class="nav justify-content-end py-2">
+        <li class="nav-item"><a class="nav-link " href="#about-section">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link " href="#animals-section">OUR ANIMALS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about-section" class="py-5">
+      <div class="container">
+        <figure class="row align-items-center g-4 m-0">
+          <div class="col-12 col-md-5">
+            <img src="aboutDog.png" class="img-fluid rounded shadow" alt="a human hanf touching dog">
+          </div>
+          <figcaption class="col-12 col-md-7">
+            <h1 class="mb-3">About Us</h1>
+            <p class="lead mb-0">
+              Welcome to Pet Adoption World! <br>
+              Our mission is to help animals get relocated to their loving homes!
+              Check out <a href="#animals-section" class="fw-semibold">OUR ANIMALS</a>
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CAROUSEL  -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Meet Our Adorable Friends</h2>
+
+        <div id="petCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active">
+              <img src="dog.png" class="d-block w-100" alt="cute dog">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                <h5>Billy the Dog</h5>
+                <p>Playful and friendly, 3 years old.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="panda.png" class="d-block w-100" alt="panda">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                <h5>Po the Panda</h5>
+                <p>Loves naps and bamboo snacks.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="tiger.png" class="d-block w-100" alt="tiger">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                <h5>Tiga the Tiger</h5>
+                <p>Strong and gentle at heart.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- arrows -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#petCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANIMALS -->
+    <section id="animals-section" class="py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">OUR ANIMALS</h2>
+
+
+        <div class="animals row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+          <figure class="animal-card col m-0">
+            <div class="card h-100">
+              <img src="dog.png" class="card-img-top" alt="cute dog">
+              <figcaption class="card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>Id: 144122</strong></li>
+                  <li><strong>name: Billy</strong></li>
+                  <li><strong>Type: Dog</strong></li>
+                  <li><strong>Age: 3yrs</strong></li>
+                  <li><strong>location: shelter</strong></li>
+                </ul>
+                <button class="adopt-me-btn btn btn-primary w-100">ADOPT ME</button>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure class="animal-card col m-0">
+            <div class="card h-100">
+              <img src="unicorn.png" class="card-img-top" alt="unicorn">
+              <figcaption class="card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>Id: 342532</strong></li>
+                  <li><strong>name: Corn</strong></li>
+                  <li><strong>Type: unicorn</strong></li>
+                  <li><strong>Age: 208yrs</strong></li>
+                  <li><strong>location: shelter</strong></li>
+                </ul>
+                <button class="adopt-me-btn btn btn-primary w-100">ADOPT ME</button>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure class="animal-card col m-0">
+            <div class="card h-100">
+              <img src="tiger.png" class="card-img-top" alt="tiger">
+              <figcaption class="card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>Id: 73468</strong></li>
+                  <li><strong>name: Tiga</strong></li>
+                  <li><strong>Type: tiger</strong></li>
+                  <li><strong>Age: 7yrs</strong></li>
+                  <li><strong>location: shelter</strong></li>
+                </ul>
+                <button class="adopt-me-btn btn btn-primary w-100">ADOPT ME</button>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure class="animal-card col m-0">
+            <div class="card h-100">
+              <img src="panda.png" class="card-img-top" alt="panda">
+              <figcaption class="card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>Id: 79472</strong></li>
+                  <li><strong>name: Po</strong></li>
+                  <li><strong>Type: panda</strong></li>
+                  <li><strong>Age: 3yrs</strong></li>
+                  <li><strong>location: shelter</strong></li>
+                </ul>
+                <button class="adopt-me-btn btn btn-primary w-100">ADOPT ME</button>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure class="animal-card col m-0">
+            <div class="card h-100">
+              <img src="shark.png" class="card-img-top" alt="shark">
+              <figcaption class="card-body">
+                <ul class="list-unstyled mb-3">
+                  <li><strong>Id: 98964</strong></li>
+                  <li><strong>name: Jaw</strong></li>
+                  <li><strong>Type: shark</strong></li>
+                  <li><strong>Age: 87yrs</strong></li>
+                  <li><strong>location: shelter</strong></li>
+                </ul>
+                <button class="adopt-me-btn btn btn-primary w-100">ADOPT ME</button>
+              </figcaption>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container text-center small">
+      <p class="mb-1">© Pet Adoption World</p>
+      <p class="mb-0"><a href="mailto:petadoptionworld@mail.com" class="link-body-emphasis">petadoptionworld@mail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

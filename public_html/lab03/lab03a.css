@@ -96,7 +96,7 @@ header a {
 /* animals section*/
 
 /*animal section houses animal cards section and title */
-.animals-section{
+.animals-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -128,7 +128,7 @@ h2 {
     align-items: center;
     margin: 20px;
     padding: 30px;
-    border: solid 4px blueviolet; 
+    border: solid 4px blueviolet;
 }
 
 .animal-card img {
@@ -136,7 +136,8 @@ h2 {
     height: 200px;
     border: solid 4px rgb(0, 0, 0);
 }
-.animal-card ul{
+
+.animal-card ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,6 +145,7 @@ h2 {
     list-style: none;
     margin: 10px;
 }
+
 .animal-card li {
     text-align: center;
     border: solid 1px rgb(0, 0, 0);
@@ -196,4 +198,354 @@ h2 {
 .adopt-me-btn:hover::after {
     opacity: 1;
     transform: scale(1.5) rotate(-360deg) translate(-20px, -20px);
+}
+
+/* ---------------------------------------
+   Base reset & defaults (mobile first)
+----------------------------------------*/
+/* help to reset and normalize page before styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Make media scale */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------------------------------------
+   Header / Nav
+----------------------------------------*/
+header nav {
+    background-color: rgb(160, 160, 230);
+    width: 100%;
+    height: 64px;
+    /* a bit shorter for mobile */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 12px;
+}
+
+header ul {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+header li {
+    list-style: none;
+}
+
+header a {
+    padding: 8px 10px;
+    border: solid 3px blueviolet;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: blueviolet;
+    background-color: azure;
+    border-radius: 8px;
+}
+
+/* ---------------------------------------
+   About section
+----------------------------------------*/
+#about-section {
+    display: flex;
+    /* mobile: single column stack */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 60vh;
+    /* more fluid than fixed 700px */
+    margin: 20px auto;
+    padding: 16px;
+}
+
+#about-section figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* mobile: 1 column */
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    /* vertically centers both sides */
+    gap: 16px;
+    padding: 20px;
+    border: solid 3px powderblue;
+    /* fixed typo: soild -> solid */
+    max-width: 1100px;
+    width: 100%;
+}
+
+#about-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    color: blueviolet;
+}
+
+#about-section figure img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+#about-section figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+#about-section a {
+    font-family: 'Montserrat', sans-serif;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+/* ---------------------------------------
+   Animals section
+----------------------------------------*/
+.animals-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    color: blueviolet;
+    margin: 40px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.animals {
+    display: grid;
+    /* grid is great for wrapping cards */
+    grid-template-columns: 1fr;
+    /* mobile: 1 per row */
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px;
+}
+
+.animal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* grid gap handles spacing */
+    padding: 20px;
+    border: solid 4px blueviolet;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.animal-card img {
+    width: 200px;
+    height: 200px;
+    border: solid 4px #000;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.animal-card ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    margin: 10px 0;
+    gap: 8px;
+    width: 100%;
+}
+
+.animal-card li {
+    width: 100%;
+    border: solid 1px #000;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* -- adopt me button + sparkles -- */
+.adopt-me-btn {
+    position: relative;
+    background: #c6b3f4;
+    color: blueviolet;
+    font-size: 1rem;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 16px 0 0;
+}
+
+/* two pseudo-elements for sparkle layers */
+.adopt-me-btn::before,
+.adopt-me-btn::after {
+    content: "★ ";
+    position: absolute;
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+    transition: transform 0.6s ease, opacity 0.4s ease;
+}
+
+/* first star (top-left) */
+.adopt-me-btn::before {
+    top: -10px;
+    left: -10px;
+}
+
+/* second star (bottom-right) */
+.adopt-me-btn::after {
+    bottom: -10px;
+    right: -10px;
+}
+
+/* When hovered make stars appear + spin out */
+.adopt-me-btn:hover::before {
+    opacity: 1;
+    transform: scale(1.5) rotate(360deg) translate(20px, 20px);
+}
+
+.adopt-me-btn:hover::after {
+    opacity: 1;
+    transform: scale(1.5) rotate(-360deg) translate(-20px, -20px);
+}
+
+
+footer {
+    background-color: rgb(160, 160, 230);
+    color: blueviolet;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =======================================
+   RESPONSIVE BREAKPOINTS
+   Common sizes:
+   - Smartphone:   default (0–599px)
+   - Tablet:       ≥ 600px
+   - Desktop:      ≥ 1024px
+======================================= */
+
+/* Tablet (≥ 600px) */
+@media (min-width: 600px) {
+    header nav {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    header ul {
+        gap: 12px;
+    }
+
+    header a {
+        padding: 10px 14px;
+    }
+
+    #about-section {
+        padding: 24px;
+    }
+
+    #about-section figure {
+        grid-template-columns: 1fr 1fr;
+        /* image and text will be side-by-side */
+        grid-template-rows: auto;
+        gap: 24px;
+    }
+
+    #about-section figure img {
+        max-width: 420px;
+        /* cap image so text has room */
+        justify-self: center;
+    }
+
+    .animals {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* 2 cards per row */
+    }
+
+    .animal-card {
+        padding: 24px;
+    }
+
+    .adopt-me-btn {
+        font-size: 1.05rem;
+        padding: 0.9rem 1.4rem;
+    }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+
+    header nav {
+        padding: 0 32px;
+    }
+
+    header ul {
+        gap: 16px;
+    }
+
+    header a {
+        padding: 10px 16px;
+    }
+
+    #about-section {
+        margin: 32px 32px;
+        padding: 32px;
+    }
+
+    #about-section figure {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    #about-section figure img {
+        max-width: 480px;
+    }
+
+    .animals {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        /* 3 cards per row */
+        gap: 24px;
+    }
+
+    .animal-card {
+        padding: 28px;
+    }
+
+    .adopt-me-btn {
+        font-size: 1.1rem;
+        padding: 1rem 1.6rem;
+    }
 }
