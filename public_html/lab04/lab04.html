@@ -4,23 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Title</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>mini client side programming project</title>
+    <link rel="stylesheet" href="lab04.css">
 </head>
 
 <body>
 
-    <header>
-        
-    </header>
-
     <main>
-  
+        <h1> Favourite Websites </h1>
+
+        <!--the input box for user to put link for verification and saving-->
+        <section class="getlink-section">
+            <input type="text" id="rawlink" placeholder="enter your favourite website (make sure it has http or https in the link)">
+            <button id="savelink" onclick="getlink()">SAVE LINK </button>
+        </section>
+
+        <!--list of fav websites-->
+        <h2>Favourite Websites List</h2>
+        <section id="bookmark-list"></section>
+
+
     </main>
 
-    <footer>
-
-    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
