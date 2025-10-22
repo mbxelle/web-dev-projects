@@ -14,13 +14,14 @@ main {
 #recommendations {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     border: 3px solid blue;
-    padding: 50px;
+    padding: 10px;
     text-align: center;
     list-style: none;
     text-decoration: none;
+    background-color: blueviolet;
 }
 
 #recommendations li {
@@ -40,7 +41,7 @@ main {
 #rawlink {
     margin: 30px;
     height: 40px;
-    width: 200px;
+    width: 450px;
 }
 
 #bookmark-list {
@@ -48,4 +49,19 @@ main {
     border: 2px solid black;
     height: 350px;
     width: 200px;
+}
+
+.plain{
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputword{
+    padding:20px;
+    height: 100px;
+    width: 300px
 }

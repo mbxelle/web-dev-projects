@@ -44,5 +44,40 @@ function showBookmarks() {
   document.getElementById("bookmark-list").innerHTML = bookmark.join("<br>");
 }
 
+//------------------Is it palindrome?---------------------------
+
+//function that is called to remove all spaces and puntuation
+//and returns a string called cleaned
 
 
+function normal(str){
+    //clean string starts off empty so we can append
+    let clean = "";
+    //converts string to lowercase
+    str = str.toLowerCase();
+    //go thru the whole input string
+    for (let i = 0; i < str.length; i++) {
+        //store the iteration in ch
+        const ch = str[i];
+        //filter it so it is only alphabet
+        if (ch >= "a" && ch<="z"){
+            clean += ch; // add that to the cleaned string
+        }
+    }
+    return clean;
+}
+
+
+function isPalindrome(str) {
+//calls function that remvoes spaces and puncutation
+  let word = normal(str);
+//turns what is outputted from that function,
+//split string into array of letters, reveres the array and then combines it as a string again
+  let backwards = word.split("").reverse().join("");
+  if (word === backwards){
+    alert("word is a palindrome");
+  } else{
+    alert("word is not a palindrome");
+  }
+ 
+}

@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mini client side programming project</title>
+    <title>Favourite Website list Maker and Is it a Palindrome??</title>
     <link rel="stylesheet" href="lab04.css">
 </head>
 
 <body>
 
     <main>
-        <h1> Favourite Websites </h1>
+        <h1> Favourite Website list Maker and Is it a Palindrome??</h1>
         <section id="recommendations">
-            <h3>toronto's fav links. Try them out! </h3>
+            <h3>toronto's fav links. Try them out in the box below! </h3>
             <ul>
                 <li> http://salem.lib.virginia.edu</li>
                 <li> https://www.google.com/</li>
@@ -22,7 +22,8 @@
 
         <!--the input box for user to put link for verification and saving-->
         <section class="getlink-section">
-            <input type="text" id="rawlink" placeholder="enter your favourite website (make sure it has http or https in the link)" >
+            <input type="text" id="rawlink"
+                placeholder="enter your favourite website (make sure it has http or https in the link)">
             <button id="savelink" onclick="addFav()">SAVE LINK </button>
 
         </section>
@@ -30,6 +31,19 @@
         <!--list of fav websites-->
         <h2>Favourite Websites List</h2>
         <section id="bookmark-list"></section>
+
+        <section class="plain">
+            <h2>Is it a Plaindrome??</h2>
+            <p> press each word to test if they are plaindromes</p>
+            <!-- note: this.innerText reads or changed the test that appears between a tag-->
+            <button class="inputword" onclick="isPalindrome(this.innerText)">Mr. Owl ate my metal worm.</button>
+            <button class="inputword" onclick="isPalindrome(this.innerText)">I’m on a seafood diet. I see food and I eat it.</button>
+            <button class="inputword" onclick="isPalindrome(this.innerText)">level</button>
+            <button class="inputword" onclick="isPalindrome(this.innerText)">Love is sharing your popcorn.</button>
+            <button class="inputword" onclick="isPalindrome(this.innerText)">Was it a car or a cat I saw?</button>
+            <button class="inputword" onclick="isPalindrome(this.innerText)">kayak</button>
+            <button class="inputword" onclick="isPalindrome(this.innerText)">boom</button>
+        </section>
 
 
     </main>
