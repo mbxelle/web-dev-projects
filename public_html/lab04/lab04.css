@@ -1,4 +1,4 @@
-html{
+html {
     background-color: bisque;
 }
 
@@ -11,6 +11,23 @@ main {
     border: 2px soild black;
 }
 
+#recommendations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid blue;
+    padding: 50px;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+#recommendations li {
+    list-style: none;
+    text-decoration: none;
+}
+
 .getLink-Section {
     display: flex;
     flex-direction: column;
@@ -18,4 +35,17 @@ main {
     align-items: center;
     width: 100%;
 
+}
+
+#rawlink {
+    margin: 30px;
+    height: 40px;
+    width: 200px;
+}
+
+#bookmark-list {
+    padding: 100px;
+    border: 2px solid black;
+    height: 350px;
+    width: 100px;
 }
