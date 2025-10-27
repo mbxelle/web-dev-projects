@@ -49,6 +49,9 @@ function showBookmarks() {
 //function that is called to remove all spaces and puntuation
 //and returns a string called cleaned
 
+//outputs the text in purple if it is palindrome 
+//outputs the text in blue underline if it is not palinrome
+const output =[];
 
 function normal(str){
     //clean string starts off empty so we can append
@@ -69,6 +72,7 @@ function normal(str){
 
 
 function isPalindrome(str) {
+  const rawtext = str;
 //calls function that remvoes spaces and puncutation
   let word = normal(str);
 //turns what is outputted from that function,
@@ -76,8 +80,28 @@ function isPalindrome(str) {
   let backwards = word.split("").reverse().join("");
   if (word === backwards){
     alert("word is a palindrome");
+    showpurple(rawtext);
   } else{
     alert("word is not a palindrome");
+    showblue(rawtext);
   }
  
+}
+
+function showpurple(word){
+  const display = document.getElementById("display");
+  display.innerHTML = word;
+  display.style.color = "purple";
+}
+
+  //rawtext is passed in this function to be styled and displayed in display box
+function showblue(word){
+  //finds element named display and gives us an element so we can style and edit
+  const display = document.getElementById("display");
+  //innerHTML insterst the string into the page
+  display.innerHTML = word;
+  //styles the element
+  display.style.color = "blue";
+  //
+  display.style.textDecoration = "underline";
 }
