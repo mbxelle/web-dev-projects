@@ -10,19 +10,25 @@
 
 <body>
     <section class="problem1-section">
-        
+
         <h1> problem 1 </h1>
-        <form>
+        <!--note: form novalidate means use the javascript code to handle the validation not the built in html validation-->
+        <form >
             <!--note the for attribute is not necessary, only for asseibility purposes-->
             <label class="block" for="name">First name:</label><br>
-            <input class="block" type="text" id="name" name="name"><br>
+            <input class="block" type="text" id="name" name="name" required><br>
 
             <label class="block" for="address">Address:</label><br>
-            <input class="block" type="text" id="address" name="address"><br>
+            <input class="block" type="text" id="address" name="address" required><br>
 
             <label class="block" for="phone">Phone Number: use format (416)
                 555-5555</label><br>
-            <input class="block" type="text" id="phone" name="phone">
+            <input class="block" type="text" id="phone" name="phone" required>
+
+
+
+            <button type="button" onclick="valid()">submit</button>
+
         </form>
         <section class="display">
             <div id="named"></div>
@@ -33,12 +39,12 @@
 
 
     <section id="problem2_section">
-    <h1> problem 2 </h1>
-    <p> for problem is suppose to get hours and then </p>
+        <h1> problem 2 </h1>
+        <p> for problem is suppose to get hours and then </p>
     </section>
     <section id="problem3_section">
-    <h1> porblem 3 </h1>
-    
+        <h1> porblem 3 </h1>
+
     </section>
 
 
