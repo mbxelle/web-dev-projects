@@ -61,17 +61,20 @@ function phoneValid() {
 
     //cechk iff the length is 14 characters, if not invlaid
     if (numarray.length !== 14) {
-        alert("invalid, phone number must contain 14 characters")
+        alert("invalid, phone number must contain 14 characters in")
+        return false;
     }
     //check if the format of the non numbers are correct
     if (numarray[0] !== "(" || numarray[4] !== ")" || numarray[5] !== " " || numarray[9] !== "-") {
         alert("invalid, Phone number must follow format (416) 555-5555");
+                return false;
     }
     //check if the remaining indicies are digits
     const digitPositions = [1, 2, 3, 6, 7, 8, 10, 11, 12, 13];
     for (let i of digitPositions) {
         if (!/^[0-9]$/.test(numarray[i])) {
             alert("invalid, Phone number must contain digits in correct places");
+                    return false;
         }
     }
     return numberV;
@@ -84,11 +87,13 @@ function displayInfo() {
   const addressVal = document.getElementById('address').value;
   const phoneVal = document.getElementById('phone').value;
 
-  document.getElementById('named').textContent = nameVal;
-  document.getElementById('addressd').textContent = addressVal;
-  document.getElementById('phoned').textContent = phoneVal;
+document.getElementById('named').innerHTML =
+    `<h2 style="color:lightgreen;">${nameVal}</h2><br>`;
+  document.getElementById('addressd').innerHTML =
+    `<h2 style="color:wheat;">${addressVal}</h2><br>`;
+  document.getElementById('phoned').innerHTML =
+    `<h2 style="color:skyblue;">${phoneVal}</h2><br>`;
 }
-
 
 //function checks if phone number is valid
 
@@ -100,3 +105,21 @@ function valid() {
   displayInfo();
   return true;
 }
+
+
+//-------------probelm 2 clock problem--
+
+function updateClock() {
+
+  const now = new Date();
+  let h = now.getHours();
+  let m = now.getMinutes();
+  let s = now.getSeconds();
+//if the number is less than 10, show a transparent zero before it otherwise, just show the number normally.
+  const format = n => (n < 10 ? `<span style="opacity:0.6;">0</span>${n}` : n);
+
+  document.getElementById("clock").innerHTML = `${format(h)}:${format(m)}:${format(s)}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();

@@ -13,7 +13,10 @@
 
         <h1> problem 1 </h1>
         <!--note: form novalidate means use the javascript code to handle the validation not the built in html validation-->
-        <form >
+        <!--note: onSubmit= return function vs onSubmit= function, is dff one means
+        Using return valid() means if your function returns false, the form won’t submit, and if it returns true, it will.
+Without return, the form will always submit no matter what your function returns. -->
+        <form onsubmit="return valid()">
             <!--note the for attribute is not necessary, only for asseibility purposes-->
             <label class="block" for="name">First name:</label><br>
             <input class="block" type="text" id="name" name="name" required><br>
@@ -38,10 +41,12 @@
     </section>
 
 
-    <section id="problem2_section">
+    <section id="problem2-section">
         <h1> problem 2 </h1>
-        <p> for problem is suppose to get hours and then </p>
+        <div id="clock" title="Current time">00:00:00</div>
     </section>
+
+    
     <section id="problem3_section">
         <h1> porblem 3 </h1>
 
