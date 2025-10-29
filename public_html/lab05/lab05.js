@@ -136,17 +136,17 @@ $(document).ready(function() {
     // Small delay to trigger fade/scale animation via css class show. in javscript vanilla  overlay.classList.add similar('show').
     setTimeout(function() {
       $('#overlay').addClass('show');
-    }, 10);
+    }, 15);
   });
 
-  // When the close icon is clicked
+  // when the close icon is clicked
   $('.close-icon').click(function() {
-    // Remove "show" class to shrink back
+    // remove "show" class to shrink back
     $('#overlay').removeClass('show');
 
     // Wait for animation to finish, then hide overlay
     setTimeout(function() {
       $('#overlay').css('display', 'none');
-    }, 800);
+    }, 2000);
   });
 });
