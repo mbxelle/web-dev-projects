@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jquery and javascript </title>
+    <title>input form, clock, picture </title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="lab05.css">
 </head>
 
@@ -29,7 +32,6 @@ Without return, the form will always submit no matter what your function returns
             <input class="block" type="text" id="phone" name="phone" required>
 
 
-
             <button type="button" onclick="valid()">submit</button>
 
         </form>
@@ -46,11 +48,40 @@ Without return, the form will always submit no matter what your function returns
         <div id="clock" title="Current time">00:00:00</div>
     </section>
 
-    
+
     <section id="problem3_section">
-        <h1> porblem 3 </h1>
+        <h1> problem 3 </h1>
+        <!-- Material Symbols (icon font) -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+        <!-- Trigger image -->
+        <img id="mainImage" src="panda.jpeg" alt="panda">
+
+        <!-- Overlay -->
+        <div id="overlay">
+            <div class="card">
+                <img src="panda.jpeg" alt="panda">
+
+                <!-- Curved text -->
+                <div class="curve">
+                    <svg viewBox="0 0 400 400" aria-hidden="true">
+                        <defs>
+                            <path id="curvePath" d="M200,200 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0"></path>
+                        </defs>
+                        <text text-anchor="middle">
+                            <textPath href="#curvePath" startOffset="50%">cute chubby baby panda</textPath>
+                        </text>
+                    </svg>
+                </div>
+
+                <!-- Bottom-right close icon (matches CSS: .close/.close_icon and jQuery: .close-icon) -->
+                <span class="material-symbols-outlined close close-icon close_icon">close</span>
+            </div>
+        </div>
+
 
     </section>
+
 
 
     <script src="lab05.js"></script>

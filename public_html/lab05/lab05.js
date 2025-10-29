@@ -116,10 +116,37 @@ function updateClock() {
   let m = now.getMinutes();
   let s = now.getSeconds();
 //if the number is less than 10, show a transparent zero before it otherwise, just show the number normally.
-  const format = n => (n < 10 ? `<span style="opacity:0.6;">0</span>${n}` : n);
+  const format = n => (n < 10 ? `< span style = " opacity:0.6 ; " > 0 </span>${n}` : n);
 
   document.getElementById("clock").innerHTML = `${format(h)}:${format(m)}:${format(s)}`;
 }
 
 setInterval(updateClock, 1000);
 updateClock();
+//---------------problem 3
+
+// wair until the document is ready
+$(document).ready(function() {
+
+  // When the small image (#mainImage) is clicked
+  $('#mainImage').click(function() {
+    // Show overlay (make visible)
+    $('#overlay').css('display', 'flex');
+    
+    // Small delay to trigger fade/scale animation via css class show. in javscript vanilla  overlay.classList.add similar('show').
+    setTimeout(function() {
+      $('#overlay').addClass('show');
+    }, 10);
+  });
+
+  // When the close icon is clicked
+  $('.close-icon').click(function() {
+    // Remove "show" class to shrink back
+    $('#overlay').removeClass('show');
+
+    // Wait for animation to finish, then hide overlay
+    setTimeout(function() {
+      $('#overlay').css('display', 'none');
+    }, 800);
+  });
+});
