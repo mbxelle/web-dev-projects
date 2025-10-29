@@ -116,7 +116,7 @@ function updateClock() {
   let m = now.getMinutes();
   let s = now.getSeconds();
 //if the number is less than 10, show a transparent zero before it otherwise, just show the number normally.
-  const format = n => (n < 10 ? `< span style = " opacity:0.6 ; " > 0 </span>${n}` : n);
+  const format = n => (n < 10 ? `<span style="opacity:0.6;">0</span>${n}` : n);
 
   document.getElementById("clock").innerHTML = `${format(h)}:${format(m)}:${format(s)}`;
 }
